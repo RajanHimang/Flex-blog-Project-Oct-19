@@ -1,0 +1,77 @@
+/* min-width -> If you are doing mobile first design */
+/* max-width-> If you are doing desktop first design */
+
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+h1 {
+    color: green;
+
+}
+
+h1::after {
+    content: "-->Desktop";
+}
+
+/* Media Query */
+/* media type - print, screen, all*/
+/* First find out all the break point  or screen size */
+/* I pad breakpoint - 800px */
+
+@media screen and (max-width: 800px) {
+    h1 {
+        color: brown;
+    }
+    h1::after {
+        content: "-->Ipad";
+    }
+}
+
+/* iPhone breakpoint - 390 px */
+
+@media screen and (max-width: 390px) {
+    h1 {
+        color: blue;
+    }
+
+    h1::after {
+        content: "-->Mobile"
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        color: brown;
+    }
+    h1::after {
+        content: "-->Ipad";
+    }
+}
+
+/* iPhone breakpoint - 390 px */
+
+@media screen and (min-width: 390px) {
+    h1 {
+        color: blue;
+    }
+
+    h1::after {
+        content: "-->Mobile"
+    }
+    
+}
+

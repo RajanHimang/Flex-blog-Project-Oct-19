@@ -1,0 +1,325 @@
+
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* css for container */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.global-msg >div {
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+}
+
+.global-msg {
+    background-color: cadetblue;
+}
+
+/* Top Nav */
+.nav-bar > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    padding: 1rem 0;
+    background-color: rgb(202, 96, 20);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.menu > ul {
+    display: flex;
+    gap: 10px;
+}
+
+.menu > ul > li:hover {
+    color: purple;
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+.hero {
+    /* background-color: burlywood; */
+    /* background-image: url(./image/tree.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+
+    background: url(./image/tree.jpeg) no-repeat center;
+    background-size: cover;
+
+
+
+
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content{
+    background-color: rgb(7, 7, 6, 0.365);
+    
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
+/* main content */
+.main {
+    display: flex;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+.main-content {
+    width: 60%;
+    /* background-color: brown; */
+}
+
+.art-img {
+    width: 400px;
+    /* transition: all 0.5s ease-in; */
+
+}
+article {
+    display: flex;
+    gap: 10px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+.side-links {
+    width: 40%;
+    background-color: rgb(243, 248, 243);
+}
+
+.title{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.art-content div {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: orange;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    
+}
+
+.btn:hover {
+    background-color: white;
+    color: orangered;
+    border: 1px solid orangered;
+}
+
+.btn-box  {
+    display: flex;
+    justify-content:  right;
+}
+
+/* Side links */
+
+.read-by-country, .read-by-date {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: coral;
+    border-radius: 5px;
+}
+
+.read-by-date {
+    background-color: rgb(219, 230, 22);
+}
+
+.side-links li::before {
+    content: "🏎️";
+}
+
+.read-by-date li::before {
+    content: "🚘";
+}
+
+/* Recommendations */
+
+.reommendation {
+    background-color: antiquewhite;
+    padding: 3rem;
+}
+
+.card-list {
+
+    display: flex;
+    margin-top: 20px;
+    /* gap: 2rem; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.card {
+    /* width: 250px; */
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 2px 3px 15px 5px rgb(53, 97, 185);
+    /* flex: 1; */
+    flex-basis: 250px;
+    flex-grow: 1;
+
+}
+
+/* Subsribe */
+.subs {
+    background-color: bisque;
+    padding: 5rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.subs input {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid orangered;
+}
+
+.subs input:focus {
+    outline: none;
+    border: 2px solid orangered;
+}
+
+footer {
+    background-color: black;
+    color: bisque;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Media Query */
+/* iPad */
+
+@media (max-width: 800px) {
+    .nav-bar {
+        background-color: orange;
+        color: white;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+
+    .side-links {
+        width: 30%
+    }
+    .main {
+        display: flex;
+        padding: 2rem;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .art-img {
+        width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+   
+
+}
+
+@media screen and (max-width: 580px) {
+    .art-img {
+        width: 200px;
+     
+    }
+}
+
+/* Mid Breakpoint */
+
+@media (max-width: 480px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .side-links,.main-content {
+        width: 100%;
+    }
+
+    .art-img {
+        width: 180px;
+    }
+
+    .side-links {
+        display: flex;
+        margin-bottom: 20px;
+        gap: 20px;
+    }
+
+    .side-links > div {
+        flex: 1;
+    }
+
+    .subs form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+}
+
+@media (max-width: 390px) {
+    .hero-content {
+        padding: 0.4rem 1rem;
+    
+    }
+    .hero-content > h1 {
+        font-size: 1.5rem;
+    }
+
+    .art-img {
+        width: 100%;
+    }
+
+    .subs h3 {
+        text-align: center;
+        padding: 0px 10px;
+
+    }
+
+}
